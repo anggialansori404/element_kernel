@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: fadlyas/kernel_dockerfile:latest
+    steps:
+      - checkout
+      - run: wget https://github.com/anggialansori404/Scripts/raw/gcc/kernel.sh
+      - run: bash kernel.sh
